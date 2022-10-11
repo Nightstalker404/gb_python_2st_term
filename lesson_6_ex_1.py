@@ -4,5 +4,9 @@
 # Ввод чисел продолжается до ввода пустой строки.
 import math
 
-lst = map(int, input().split())
-print(math.gcd(*lst))
+lst = []
+try:
+    while True:
+        lst.append(int(input()))
+except ValueError:
+    print(math.gcd(*lst))
